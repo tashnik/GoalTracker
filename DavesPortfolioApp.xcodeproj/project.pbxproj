@@ -20,6 +20,7 @@
 		2A603532254A16A9000FECA8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A603531254A16A9000FECA8 /* CloudKit.framework */; };
 		2A71484E254CAD9F00DD9CBB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71484D254CAD9E00DD9CBB /* HomeView.swift */; };
 		2A714851254CAFAB00DD9CBB /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A714850254CAFAB00DD9CBB /* ProjectsView.swift */; };
+		2A8928BD2554489000146061 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8928BC2554489000146061 /* Binding-OnChange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2A603531254A16A9000FECA8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2A71484D254CAD9E00DD9CBB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2A714850254CAFAB00DD9CBB /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		2A8928BC2554489000146061 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2A6035172549F47A000FECA8 /* DavesPortfolioAppApp.swift */,
 				2A6035192549F47A000FECA8 /* ContentView.swift */,
 				2A4630E325519D5F00953B70 /* EditItemView.swift */,
+				2A8928BC2554489000146061 /* Binding-OnChange.swift */,
 				2A4630DD2550587200953B70 /* Item-CoreDataHelpers.swift */,
 				2A4630E025505A6500953B70 /* Project-CoreDataHelpers.swift */,
 				2A6035272549F9DB000FECA8 /* Main.xcdatamodeld */,
@@ -182,6 +185,7 @@
 				2A60352C2549FE93000FECA8 /* DataController.swift in Sources */,
 				2A4630E72551ABC700953B70 /* ItemRowView.swift in Sources */,
 				2A60351A2549F47A000FECA8 /* ContentView.swift in Sources */,
+				2A8928BD2554489000146061 /* Binding-OnChange.swift in Sources */,
 				2A71484E254CAD9F00DD9CBB /* HomeView.swift in Sources */,
 				2A6035182549F47A000FECA8 /* DavesPortfolioAppApp.swift in Sources */,
 				2A4630DE2550587200953B70 /* Item-CoreDataHelpers.swift in Sources */,
