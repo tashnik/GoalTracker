@@ -33,7 +33,7 @@ struct EditProjectView: View {
   var body: some View {
     
     Form {
-      Section(header: Text("Basic Settings")) {
+      Section(header: Text("Goal Settings")) {
         TextField("Goal Name", text: $title.onChange(update))
         TextField("Description of this Goal", text: $detail.onChange(update))
       }
@@ -79,9 +79,9 @@ struct EditProjectView: View {
     .onDisappear(perform: {
       dataController.save()
     })
-    .alert(isPresented: $showingDeleteConfirm, content: {
-      Alert(title: Text("Delete Goal?"), message: Text("Are you sure you want to delete this goal?  This will also delete all your actions it contains"), primaryButton: .default(Text("Delete")), secondaryButton: .cancel())
-    })
+    .alert(isPresented: $showingDeleteConfirm) {
+        Alert(title: Text("Delete project?"), message: Text("Are you sure you want to delete this goal? You will also delete all the items it contains."), primaryButton: .default(Text("Delete"), action: delete), secondaryButton: .cancel())
+    }
   }
   
   func update() {

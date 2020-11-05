@@ -30,8 +30,8 @@ struct EditItemView: View {
   
     var body: some View {
       Form {
-        Section(header: Text("Basic Settings")) {
-          TextField("Item Name", text: $title.onChange(update))
+        Section(header: Text("Action Settings")) {
+          TextField("Action Name", text: $title.onChange(update))
           TextField("Description", text: $detail.onChange(update))
         }
         
@@ -48,7 +48,7 @@ struct EditItemView: View {
           Toggle("Mark Completed", isOn: $completed.onChange(update))
         }
       }
-      .navigationTitle("Edit Item")
+      .navigationTitle("Edit Action")
       .onDisappear(perform: {
         dataController.save()
       })
