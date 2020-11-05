@@ -23,6 +23,7 @@
 		2A8928BD2554489000146061 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8928BC2554489000146061 /* Binding-OnChange.swift */; };
 		2A8928C02554624F00146061 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8928BF2554624F00146061 /* ProjectHeaderView.swift */; };
 		2A8F676F25546D6B0059B8CA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F676E25546D6B0059B8CA /* Colors.xcassets */; };
+		2A8F6776255475C90059B8CA /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F6775255475C90059B8CA /* EditProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		2A8928BC2554489000146061 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2A8928BF2554624F00146061 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2A8F676E25546D6B0059B8CA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2A8F6775255475C90059B8CA /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2A8928BF2554624F00146061 /* ProjectHeaderView.swift */,
+				2A8F6775255475C90059B8CA /* EditProjectView.swift */,
 				2A6035192549F47A000FECA8 /* ContentView.swift */,
 				2A4630E325519D5F00953B70 /* EditItemView.swift */,
 				2A71484D254CAD9E00DD9CBB /* HomeView.swift */,
@@ -206,6 +209,7 @@
 				2A8928C02554624F00146061 /* ProjectHeaderView.swift in Sources */,
 				2A6035292549F9DB000FECA8 /* Main.xcdatamodeld in Sources */,
 				2A4630E125505A6500953B70 /* Project-CoreDataHelpers.swift in Sources */,
+				2A8F6776255475C90059B8CA /* EditProjectView.swift in Sources */,
 				2A60352C2549FE93000FECA8 /* DataController.swift in Sources */,
 				2A4630E72551ABC700953B70 /* ItemRowView.swift in Sources */,
 				2A60351A2549F47A000FECA8 /* ContentView.swift in Sources */,

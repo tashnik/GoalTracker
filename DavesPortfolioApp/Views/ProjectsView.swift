@@ -36,7 +36,7 @@ struct ProjectsView: View {
           }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle(showClosedProjects ? "Closed Goals" : "Open Goals")
+        .navigationTitle(showClosedProjects ? "Completed Goals" : "On Track Goals")
       }
       
       
