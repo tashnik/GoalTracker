@@ -14,15 +14,19 @@ struct HomeView: View {
   @EnvironmentObject var dataController: DataController
   
     var body: some View {
-      NavigationView {
-        VStack {
-          Button("Add Data") {
-            dataController.deleteAll()
-            try? dataController.createSampleDate()
+     
+        NavigationView {
+          ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.blue,  Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
+            VStack {
+              Button("Add Goal") {
+                dataController.deleteAll()
+                try? dataController.createSampleDate()
+              }.foregroundColor(.white)
+              .font(.largeTitle)
+            }.navigationTitle("Home").foregroundColor(.white)
           }
-        }.navigationTitle("Home")
-      }
-      
+        }
     }
 }
 

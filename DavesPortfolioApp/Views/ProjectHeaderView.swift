@@ -17,16 +17,21 @@ struct ProjectHeaderView: View {
       VStack(alignment: .leading) {
         Text(project.projectTitle)
           .font(.headline)
+          .foregroundColor(.white)
         
         ProgressView(value: project.completionAmount)
           .accentColor(Color(project.projectColor))
       }
       
+      .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .top, endPoint: .bottom))
+      .cornerRadius(6.0)
+      
       Spacer()
       
       NavigationLink(destination: EditProjectView(project: project)) {
-       Image(systemName: "square.and.pencil")
+       Image(systemName: "scribble.variable")
         .imageScale(.large)
+        .foregroundColor(.blue)
       }
     }
     .padding(.bottom, 10)

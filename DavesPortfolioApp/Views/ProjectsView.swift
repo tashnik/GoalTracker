@@ -28,55 +28,58 @@ struct ProjectsView: View {
   }
   
     var body: some View {
-      NavigationView {
-        List {
-          ForEach(projects.wrappedValue) { project in
-            Section(header: ProjectHeaderView(project: project)) {
-              ForEach(project.projectItems) { item in
-               ItemRowView(item: item)
-              }
-              .onDelete { offsets in
-                  let allItems = project.projectItems
+      ZStack {
+        LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        NavigationView {
+          List {
+            ForEach(projects.wrappedValue) { project in
+              Section(header: ProjectHeaderView(project: project)) {
+                ForEach(project.projectItems) { item in
+                 ItemRowView(item: item)
+                }
+                .onDelete { offsets in
+                    let allItems = project.projectItems
 
-                  for offset in offsets {
-                      let item = allItems[offset]
-                      dataController.delete(item)
-                  }
+                    for offset in offsets {
+                        let item = allItems[offset]
+                        dataController.delete(item)
+                    }
 
-                  dataController.save()
-              }
-              
-              if showClosedProjects == false {
-                Button {
-                  withAnimation {
-                    let item = Item(context: managedObjectContext)
-                    item.project = project
-                    item.creationDate = Date()
                     dataController.save()
+                }
+                
+                if showClosedProjects == false {
+                  Button {
+                    withAnimation {
+                      let item = Item(context: managedObjectContext)
+                      item.project = project
+                      item.creationDate = Date()
+                      dataController.save()
+                    }
+                  } label: {
+                    Label("Add new Action", systemImage: "plus")
                   }
-                } label: {
-                  Label("Add new Action", systemImage: "plus")
                 }
               }
             }
           }
-        }
-        .listStyle(InsetGroupedListStyle())
-        .navigationTitle(showClosedProjects ? "Completed Goals" : "On Track Goals")
-        .toolbar(content: {
-          if showClosedProjects == false {
-            Button {
-              withAnimation {
-                let project = Project(context: managedObjectContext)
-                project.closed = false
-                project.creationDate = Date()
-                dataController.save()
+          .listStyle(InsetGroupedListStyle())
+          .navigationTitle(showClosedProjects ? "Completed Goals" : "On Track Goals")
+          .toolbar(content: {
+            if showClosedProjects == false {
+              Button {
+                withAnimation {
+                  let project = Project(context: managedObjectContext)
+                  project.closed = false
+                  project.creationDate = Date()
+                  dataController.save()
+                }
+              } label: {
+                Label("Add Goal", systemImage: "plus")
               }
-            } label: {
-              Label("Add Goal", systemImage: "plus")
             }
-          }
-        })
+          })
+        }
       }
       
     }
