@@ -19,7 +19,7 @@ struct HomeView: View {
           ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue,  Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
             VStack {
-              Button("Add Goal") {
+              Button("Add Goals") {
                 dataController.deleteAll()
                 try? dataController.createSampleDate()
               }.foregroundColor(.white)
